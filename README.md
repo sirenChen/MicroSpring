@@ -1,7 +1,13 @@
 # MicroSpring
 My own dependency injection Framework
 
-=== V1 ===  
+=== V1.1 ===
+Now support primitive type injection  
+code refactoring  
+Using commons-beanUtils to copy properties  
+<br>
+
+=== V1 === 
 Support  
 XML configuration.  
 setter method injection.  
