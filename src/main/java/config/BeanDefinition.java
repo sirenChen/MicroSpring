@@ -1,4 +1,4 @@
-package xmlConfig;
+package config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,11 @@ import java.util.List;
  * Created by Siren Chen.
  * Encapsulate the Bean Tag information in XmlConfig file
  */
-public class BeanTag {
+public class BeanDefinition {
     private String id;
     private String className;
 
-    private List<PropertyTag> properties = new ArrayList<PropertyTag>();
+    private List<PropertyDefinition> properties = new ArrayList<PropertyDefinition>();
 
     public String getId() {
         return id;
@@ -29,17 +29,17 @@ public class BeanTag {
         this.className = className;
     }
 
-    public List<PropertyTag> getProperties() {
+    public List<PropertyDefinition> getProperties() {
         return properties;
     }
 
-    public void setProperties(List<PropertyTag> properties) {
+    public void setProperties(List<PropertyDefinition> properties) {
         this.properties = properties;
     }
 
     @Override
     public String toString() {
-        return "xmlConfig.BeanTag{" +
+        return "config.BeanDefinition{" +
                 "id='" + id + '\'' +
                 ", className='" + className + '\'' +
                 ", properties=" + properties +

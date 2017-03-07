@@ -1,10 +1,10 @@
-package xmlConfig;
+package config;
 
 /**
  * Created by Siren Chen.
  * Encapsulate the Property Tag information in XmlConfig file
  */
-public class PropertyTag {
+public class PropertyDefinition {
     private String name;
     private String value;
     private String ref;
@@ -35,7 +35,7 @@ public class PropertyTag {
 
     @Override
     public String toString() {
-        return "xmlConfig.PropertyTag{" +
+        return "config.PropertyDefinition{" +
                 "name='" + name + '\'' +
                 ", value='" + value + '\'' +
                 ", ref='" + ref + '\'' +

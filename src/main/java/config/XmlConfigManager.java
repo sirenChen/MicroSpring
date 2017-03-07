@@ -1,4 +1,4 @@
-package xmlConfig;
+package config;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -13,17 +13,17 @@ import java.util.Map;
 
 /**
  * Created by Siren Chen.
- * get the bean configuration from the xmlConfig file
+ * get the bean configuration from the xml config file
  */
 public class XmlConfigManager {
 
     /**
      * get the bean config information
      * @param path xml configuration file path
-     * @return Map<String, BeanTag>
+     * @return Map<String BeanDefinition>
      */
-    public static Map<String, BeanTag> getBeanConfig(String path) {
-        Map<String, BeanTag> beanTags = new HashMap<String, BeanTag>();
+    public static Map<String, BeanDefinition> getBeanConfig(String path) {
+        Map<String, BeanDefinition> beanTags = new HashMap<String, BeanDefinition>();
 
         // init the SAXReader
         SAXReader reader = new SAXReader();
@@ -44,26 +44,26 @@ public class XmlConfigManager {
         // Beans encapsulation
         for (Element xmlBean : xmlBeans) {
             //Tag init
-            BeanTag beanTag = new BeanTag();
-            List<PropertyTag> propertyTags = new ArrayList<PropertyTag>();
+            BeanDefinition beanDefinition = new BeanDefinition();
+            List<PropertyDefinition> propertyDefinitions = new ArrayList<PropertyDefinition>();
 
             // properties encapsulation
             List<Element> xmlProperties = xmlBean.elements("property");
             for (Element xmlProperty : xmlProperties) {
-                PropertyTag propertyTag = new PropertyTag();
+                PropertyDefinition propertyDefinition = new PropertyDefinition();
 
-                propertyTag.setName(xmlProperty.attributeValue("name"));
-                propertyTag.setRef(xmlProperty.attributeValue("ref"));
-                propertyTag.setValue(xmlProperty.attributeValue("value"));
+                propertyDefinition.setName(xmlProperty.attributeValue("name"));
+                propertyDefinition.setRef(xmlProperty.attributeValue("ref"));
+                propertyDefinition.setValue(xmlProperty.attributeValue("value"));
 
-                propertyTags.add(propertyTag);
+                propertyDefinitions.add(propertyDefinition);
             }
 
-            beanTag.setId(xmlBean.attributeValue("id"));
-            beanTag.setClassName(xmlBean.attributeValue("class"));
-            beanTag.setProperties(propertyTags);
+            beanDefinition.setId(xmlBean.attributeValue("id"));
+            beanDefinition.setClassName(xmlBean.attributeValue("class"));
+            beanDefinition.setProperties(propertyDefinitions);
 
-            beanTags.put(xmlBean.attributeValue("id"), beanTag);
+            beanTags.put(xmlBean.attributeValue("id"), beanDefinition);
         }
 
         return beanTags;
