@@ -1,7 +1,9 @@
 package config;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Siren Chen.
@@ -11,7 +13,7 @@ public class BeanDefinition {
     private String id;
     private String className;
 
-    private List<PropertyDefinition> properties = new ArrayList<PropertyDefinition>();
+    private Map<String, PropertyDefinition> propertyDefinitions = new HashMap<String, PropertyDefinition>();
 
     public String getId() {
         return id;
@@ -29,20 +31,21 @@ public class BeanDefinition {
         this.className = className;
     }
 
-    public List<PropertyDefinition> getProperties() {
-        return properties;
+    public Map<String, PropertyDefinition> getPropertyDefinitions() {
+        return propertyDefinitions;
     }
 
-    public void setProperties(List<PropertyDefinition> properties) {
-        this.properties = properties;
+    public void setPropertyDefinitions(Map<String, PropertyDefinition> propertyDefinitions) {
+        this.propertyDefinitions = propertyDefinitions;
     }
+
 
     @Override
     public String toString() {
-        return "config.BeanDefinition{" +
+        return "BeanDefinition{" +
                 "id='" + id + '\'' +
                 ", className='" + className + '\'' +
-                ", properties=" + properties +
+                ", propertyDefinitions=" + propertyDefinitions +
                 '}';
     }
 }

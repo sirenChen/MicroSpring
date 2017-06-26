@@ -1,4 +1,7 @@
-/Users/sirenchen/Desktop/Framework/MySpringDemo/src/main/java/BeanFactory.java
-/Users/sirenchen/Desktop/Framework/MySpringDemo/src/main/java/config/BeanDefinition.java
-/Users/sirenchen/Desktop/Framework/MySpringDemo/src/main/java/config/PropertyDefinition.java
-/Users/sirenchen/Desktop/Framework/MySpringDemo/src/main/java/config/XmlConfigManager.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\TestBeanDefinitionReader.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\BeanDefinitionReader\BeanDefinitionReader.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\BeanDefinitionReader\XMLBeanDefinitionReader.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\config\BeanDefinitionRegistry.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\config\PropertyDefinition.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\container\BeanFactoryOld.java
+C:\Users\siren\Desktop\MicroSpring\src\main\java\config\BeanDefinition.java
