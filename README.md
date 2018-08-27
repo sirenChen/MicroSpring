@@ -1,3 +1,1 @@
- This repository is deprecated, please see the new version of this framework:
-
-[PlaySpring](https://github.com/sirenChen/PlaySpring)
+This is a simple inversion of control framework.
